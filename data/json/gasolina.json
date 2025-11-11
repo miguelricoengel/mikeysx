@@ -1,0 +1,11 @@
+{
+  "title": "gasolina",
+  "artist": "BAJOCERO X",
+  "year": 2024,
+  "description": "single cover",
+  "images": [
+    "data/img/gasolina/gasolina_cover.jpg",
+    "data/img/gasolina/gasolina_2.png",
+    "data/img/gasolina/gasolina_3.png"
+  ]
+}

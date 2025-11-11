@@ -1,0 +1,14 @@
+{
+  "title": "toda la noche",
+  "artist": "RAOUL",
+  "year": 2025,
+  "description": "single cover",
+  "images": [
+    "data/img/todaLaNoche/todaLaNoche_cover.jpg",
+    "data/img/todaLaNoche/todaLaNoche_2.jpg",
+    "data/img/todaLaNoche/todaLaNoche_3.jpg",
+    "data/img/todaLaNoche/todaLaNoche_4.jpg",
+    "data/img/todaLaNoche/todaLaNoche_5.jpg",
+    "data/img/todaLaNoche/todaLaNoche_6.jpg"
+  ]
+}

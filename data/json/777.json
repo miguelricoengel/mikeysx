@@ -1,0 +1,11 @@
+{
+  "title": "777",
+  "artist": "LASKAAR",
+  "year": 2022,
+  "description": "album cover + show poster",
+  "images": [
+    "data/img/777/777_cover.jpg",
+    "data/img/777/777_1.jpg",
+    "data/img/777/777_2.jpg"
+  ]
+}

@@ -1,0 +1,312 @@
+/* v7 — Layout flex full-height, header opcional sin clases, desktop frame centered
+==================================================================== */
+
+/* --- Root tokens ------------------------------------------------- */
+:root {
+  --bg: #000;
+  --ink: #e7e7e7;
+}
+
+/* --- Reset & base ------------------------------------------------ */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html,
+body {
+  overscroll-behavior-y: none;
+}
+body {
+  margin: 0;
+  background: #000;
+  color: var(--ink);
+  font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* --- App frame (mobile-first) ----------------------------------- */
+.viewport {
+  height: 100dvh; /* Ocupa todo el viewport SIEMPRE */
+  display: flex;
+  flex-direction: column; /* Header (opcional) + contenido desplazable */
+  align-items: center;
+  justify-content: flex-start;
+  background: #000;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sort label {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+.sort select {
+  background: #1f1f1f;
+  color: #eee;
+  border: 1px solid #333;
+  padding: 6px 8px;
+}
+
+/* Contenedor desplazable: llena el resto del alto con flex */
+.scroll-host {
+  width: 100dvw;
+  max-width: 100dvw;
+  flex: 1 1 auto; /* 👈 llena el alto restante del viewport */
+  overflow-y: auto;
+  overscroll-behavior: contain; /* no mostrar fondo por encima */
+  background: var(--bg);
+}
+
+/* Desktop: centramos el marco */
+@media (min-width: 600px) {
+  .scroll-host {
+    width: clamp(320px, 48vw, 560px);
+    max-width: 480;
+  }
+  /* .topbar {
+    width: clamp(320px, 48vw, 560px);
+    height: 56px;
+  } */
+}
+
+/* --- Listado CDs ------------------------------------------------- */
+#cdStack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  line-height: 0;
+}
+
+.cd {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-decoration: none;
+}
+.cd .bg {
+  display: none;
+}
+
+.label-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px #0009);
+}
+.cd:focus-visible {
+  outline: 2px solid #ffffff44;
+  outline-offset: -2px;
+}
+
+/* --- Página Proyecto -------------------------------------------- */
+.viewport.project .project-stage {
+  width: 100dvw;
+  max-width: 100dvw;
+  flex: 1 1 auto; /* 👈 llena el resto, igual que .scroll-host */
+  /* Evita scroll lateral fantasma del blur */
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  position: relative;
+  background: #000;
+}
+@media (min-width: 600px) {
+  .viewport.project .project-stage {
+    /* width: clamp(320px, 48vw, 560px); */
+    max-width: 560px;
+    box-shadow: 0 0 0 1px #000 inset;
+  }
+}
+.project-stage {
+  display: grid;
+  place-items: center;
+}
+/* La antigua .cover ya no se usa para la galería, evitamos conflictos */
+.cover {
+  display: none;
+}
+
+.project-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  width: 100%;
+  grid-template-rows: auto auto;
+  place-items: center;
+}
+/* La antigua .cover ya no se usa para la galería, evitamos conflictos */
+/* .cover {
+  display: none;
+}
+.back {
+  text-decoration: none;
+  color: #fff;
+} */
+
+/* Tipografías del detalle */
+h1#pTitle,
+p#pArtist,
+p#pYear {
+  font-family: "Michroma", sans-serif;
+  text-transform: uppercase;
+}
+p#pDesc {
+  font-family: "Saira", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* --- Capas fijas sin pseudo-elementos --------------------------- */
+.project-stage {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+}
+
+/* Fondo blur fijo al viewport */
+.bg-fixed {
+  position: fixed;
+  inset: -50px; /* margen para que el blur no se recorte */
+  background: center / cover no-repeat var(--stage-bg, none);
+  filter: blur(24px);
+  animation: breathe 8s ease-in-out infinite;
+  z-index: 0;          /* capa 0 */
+  pointer-events: none;
+}
+
+/* Overlay oscuro fijo encima del blur */
+.overlay-fixed {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(80% 60% at 50% 40%, rgba(0,0,0,0.10), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.30), rgba(0,0,0,0.50));
+  z-index: 1;          /* capa 1 */
+  pointer-events: none;
+}
+
+/* Contenido por encima de las dos capas fijas */
+.project-card {
+  position: relative;
+  z-index: 2;          /* capa 2: siempre sobre el overlay */
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.project-meta {
+  text-align: center;
+  width: min(92%, 520px);
+}
+
+/* --- Botón Back -------------------------------------------------- */
+.back-btn {
+  font-family: "Michroma", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 20px 16px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
+
+.back-btn:hover {
+  animation: blink 0.8s linear infinite;
+}
+
+/* --- Galería lateral -------------------------------------------- */
+.image-gallery {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px; /* espacio para la barra si aparece */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.gallery-image {
+  height: auto;
+  width: 80vw;
+  max-width: 400px;
+  object-fit: contain;
+  display: inline-block;
+  margin: 0 50px;
+  scroll-snap-align: center;
+}
+/* centrar la primera imagen */
+.image-gallery {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+@media (min-width: 900px) {
+  .gallery-image {
+    width: 400px;
+  }
+  .image-gallery {
+    padding-left: calc(50% - 200px);
+    padding-right: calc(50% - 200px);
+  }
+}
+
+/* --- Lightbox --------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999; /* por encima de overlay-fixed (1) y project-card (2) */
+  background: rgba(0,0,0,0.85);
+  display: none; /* se activa a 'flex' en runtime */
+  align-items: center;
+  justify-content: center;
+  padding: 4vmin;
+  backdrop-filter: blur(2px);
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 0 0 1px #000, 0 10px 30px rgba(0,0,0,0.6);
+}
+.lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font: 700 24px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.lightbox-close:hover { filter: brightness(1.2); }
+
+/* Evita saltos de layout cuando se bloquea el scroll */
+.has-lightbox {
+  overflow-y: hidden;
+}
+
+/* --- Utils ------------------------------------------------------- */
+/* (vacío de momento) */
+

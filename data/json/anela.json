@@ -1,0 +1,14 @@
+{
+  "title": "anela",
+  "artist": "belén aguilera",
+  "year": 2025,
+  "description": "album cover",
+  "images": [
+    "data/img/anela/anela_cover.jpg",
+    "data/img/anela/anela_1.png",
+    "data/img/anela/anela_2.jpg",
+    "data/img/anela/anela_3.png",
+    "data/img/anela/anela_4.jpg",
+    "data/img/anela/anela_5.png"
+  ]
+}

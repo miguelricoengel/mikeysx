@@ -1,0 +1,4 @@
+{
+  "title": "About este stack",
+  "html": "<p>Stack de CDs generado desde JSON. Version v6.</p><p>Edita <code>data/manifest.json</code> y <code>data/about.json</code>.</p>"
+}

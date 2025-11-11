@@ -1,0 +1,12 @@
+{
+  "title": "no tengo bateria",
+  "artist": "LASKAAR",
+  "year": 2024,
+  "description": "Album cover",
+  "images": [
+    "data/img/noTengoBateria/noTengoBateria_cover.jpg",
+    "data/img/noTengoBateria/noTengoBateria_1.jpg",
+    "data/img/noTengoBateria/noTengoBateria_2.jpg",
+    "data/img/noTengoBateria/noTengoBateria_3.png"
+  ]
+}

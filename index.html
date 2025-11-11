@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIKESX CD COLLECTION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Michroma&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="data/icon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="data/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="data/icon/favicon-16x16.png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="viewport">
+    <!-- <header class="topbar">
+      <a class="about-link" href="about.html">about</a>
+      <div class="sort">
+        <label for="sortSel">ordenar:</label>
+        <select id="sortSel" aria-label="Ordenar">
+          <option value="default">por defecto</option>
+          <option value="alpha">alfabético</option>
+          <option value="year">por fecha</option>
+        </select>
+      </div>
+    </header> -->
+    <section id="scrollHost" class="scroll-host" aria-live="polite">
+      <section id="cdStack" class="cd-stack"></section>
+    </section>
+  </main>
+
+  <template id="cdTemplate">
+    <a class="cd" role="button" tabindex="0" aria-label="CD">
+      <div class="bg"></div>
+      <img class="label-img" alt="" />
+    </a>
+  </template>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "id": "777",
+      "title": "777",
+      "artist": "LASKAAR",
+      "label": "data/img/777/777_lateral.jpg",
+      "cover": "data/img/777/777_cover.jpg",
+      "src": "data/json/777.json"
+    },
+    {
+      "id": "bb",
+      "title": "bb",
+      "artist": "LASKAAR",
+      "label": "data/img/bb/bb_lateral.jpg",
+      "cover": "data/img/bb/bb_cover.jpg",
+      "src": "data/json/bb.json"
+    },
+    {
+      "id": "anela",
+      "title": "anela",
+      "artist": "belen aguilera",
+      "label": "data/img/anela/anela_lateral.jpg",
+      "cover": "data/img/anela/anela_cover.jpg",
+      "src": "data/json/anela.json"
+    },
+    {
+      "id": "gasolina",
+      "title": "gasolina",
+      "artist": "bajocero x",
+      "label": "data/img/gasolina/gasolina_lateral.jpg",
+      "cover": "data/img/gasolina/gasolina_cover.jpg",
+      "src": "data/json/gasolina.json"
+    },
+    {
+      "id": "manners",
+      "title": "manners",
+      "artist": "bajocero x",
+      "label": "data/img/manners/manners_lateral.jpg",
+      "cover": "data/img/manners/manners_cover.jpg",
+      "src": "data/json/manners.json"
+    },
+    {
+      "id": "mikesx",
+      "title": "mikesx",
+      "artist": "bajocero x",
+      "label": "data/img/mikesx/mikesx_lateral.jpg",
+      "cover": "data/img/mikesx/mikesx_cover.jpg",
+      "src": "data/json/mikesx.json"
+    },
+    {
+      "id": "noTengoBateria",
+      "title": "noTengoBateria",
+      "artist": "LASKAAR",
+      "label": "data/img/noTengoBateria/noTengoBateria_lateral.jpg",
+      "cover": "data/img/noTengoBateria/noTengoBateria_cover.jpg",
+      "src": "data/json/noTengoBateria.json"
+    },
+    {
+      "id": "munyekeo",
+      "title": "munyekeo",
+      "artist": "LASKAAR",
+      "label": "data/img/munyekeo/munyekeo_lateral.jpg",
+      "cover": "data/img/munyekeo/munyekeo_cover.jpg",
+      "src": "data/json/munyekeo.json"
+    },
+    {
+      "id": "todaLaNoche",
+      "title": "toda la noche",
+      "artist": "RAOUL",
+      "label": "data/img/todaLaNoche/todaLaNoche_lateral.jpg",
+      "cover": "data/img/todaLaNoche/todaLaNoche_cover.jpg",
+      "src": "data/json/todaLaNoche.json"
+    },
+    {
+      "id": "celoso",
+      "title": "celoso",
+      "artist": "mikesx",
+      "label": "data/img/celoso/celoso_lateral.jpg",
+      "cover": "data/img/celoso/celoso_cover.jpg",
+      "src": "data/json/celoso.json"
+    }
+  ]
+}
