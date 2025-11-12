@@ -17,6 +17,14 @@
       "src": "data/json/bb.json"
     },
     {
+      "id": "sexOnTheBeach",
+      "title": "sex on the beacg",
+      "artist": "Mike",
+      "label": "data/img/sexOnTheBeach/sexOnTheBeach_lateral.jpg",
+      "cover": "data/img/sexOnTheBeach/sexOnTheBeach_1.jpg",
+      "src": "data/json/sexOnTheBeach.json"
+    },
+    {
       "id": "anela",
       "title": "anela",
       "artist": "belen aguilera",

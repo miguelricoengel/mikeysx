@@ -45,6 +45,22 @@ document.getElementById("pYear").textContent = data.year || "";
 document.getElementById("pDesc").textContent = data.description || "";
 document.title = (data.title || "PROYECTO").toUpperCase();
 
+// Inserta el enlace pequeño cuando el proyecto es "mikesx"
+if ((id || "").toLowerCase() === "mikesx") {
+  const card = document.querySelector(".project-card");
+  const backBtn = card?.querySelector(".back-btn");
+  if (card) {
+    const footnote = document.createElement("p");
+    footnote.className = "project-footnote";
+    footnote.innerHTML = `web: <a href="https://meowrhino.github.io/becasDigMeow/" target="_blank" rel="noopener noreferrer">meowrhino</a>`;
+    if (backBtn) {
+      card.insertBefore(footnote, backBtn);
+    } else {
+      card.appendChild(footnote);
+    }
+  }
+}
+
 // Lógica para la galería de imágenes con scroll lateral
 const gallery = document.getElementById("imageGallery");
 

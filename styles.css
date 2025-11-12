@@ -210,6 +210,20 @@ p#pDesc {
   text-align: center;
   width: min(92%, 520px);
 }
+.project-footnote {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  opacity: 0.7;
+  margin: 12px 0 0;
+}
+.project-footnote a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
 
 /* --- Botón Back -------------------------------------------------- */
 .back-btn {
@@ -309,4 +323,3 @@ p#pDesc {
 
 /* --- Utils ------------------------------------------------------- */
 /* (vacío de momento) */
-
