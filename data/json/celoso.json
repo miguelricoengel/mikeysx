@@ -4,8 +4,8 @@
   "year": 2025,
   "description": "En Celoso, eliges entre cuatro personajes para luchar contra lo irracional. Una batalla con uno mismo, perdida antes de su inicio. La interfaz brilla, el ego tiembla. Rendirse y tirar el escudo nunca ha sido tan duro, ni tan necesario.",
   "images": [
-    "data/img/celoso/celoso_cover.png",
     "data/img/celoso/celoso_2.png",
+    "data/img/celoso/celoso_cover.png",
     "data/img/celoso/celoso_3.jpg"
   ]
 }

@@ -87,6 +87,14 @@
       "label": "data/img/celoso/celoso_lateral.jpg",
       "cover": "data/img/celoso/celoso_cover.jpg",
       "src": "data/json/celoso.json"
+    },
+    {
+      "id": "soldado",
+      "title": "soldado",
+      "artist": "mikesx",
+      "label": "data/img/soldado/soldado_lateral.jpg",
+      "cover": "data/img/soldado/soldado_cover.jpg",
+      "src": "data/json/soldado.json"
     }
   ]
 }
