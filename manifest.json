@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "mikesx",
-      "title": "mikesx",
-      "artist": "bajocero x",
-      "label": "data/img/mikesx/mikesx_lateral.jpg",
-      "cover": "data/img/mikesx/mikesx_cover.jpg",
-      "src": "data/json/mikesx.json"
-    },
-    {
       "id": "sexOnTheBeach",
       "title": "sex on the beacg",
       "artist": "Mike",
@@ -65,14 +57,6 @@
       "src": "data/json/noTengoBateria.json"
     },
     {
-      "id": "manners",
-      "title": "manners",
-      "artist": "bajocero x",
-      "label": "data/img/manners/manners_lateral.jpg",
-      "cover": "data/img/manners/manners_cover.jpg",
-      "src": "data/json/manners.json"
-    },
-    {
       "id": "celoso",
       "title": "celoso",
       "artist": "mikesx",
@@ -81,12 +65,36 @@
       "src": "data/json/celoso.json"
     },
     {
+      "id": "virtualDiva",
+      "title": "virtual diva",
+      "artist": "mikesx",
+      "label": "data/img/virtualDiva/virtualDiva_lateral.jpg",
+      "cover": "data/img/virtualDiva/virtualDiva_cover.jpg",
+      "src": "data/json/virtualDiva.json"
+    },
+    {
+      "id": "mikesx",
+      "title": "mikesx",
+      "artist": "bajocero x",
+      "label": "data/img/mikesx/mikesx_lateral.jpg",
+      "cover": "data/img/mikesx/mikesx_cover.jpg",
+      "src": "data/json/mikesx.json"
+    },
+    {
       "id": "777",
       "title": "777",
       "artist": "LASKAAR",
       "label": "data/img/777/777_lateral.jpg",
       "cover": "data/img/777/777_cover.jpg",
       "src": "data/json/777.json"
+    },
+    {
+      "id": "manners",
+      "title": "manners",
+      "artist": "bajocero x",
+      "label": "data/img/manners/manners_lateral.jpg",
+      "cover": "data/img/manners/manners_cover.jpg",
+      "src": "data/json/manners.json"
     },
     {
       "id": "munyekeo",
