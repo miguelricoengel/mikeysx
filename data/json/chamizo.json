@@ -1,0 +1,14 @@
+{
+  "title": "CHAMIZO",
+  "artist": "Daniel",
+  "year": 2025,
+  "description": "xxx",
+  "images": [
+    "data/img/chamizo/chamizo_cover.jpg",
+    "data/img/chamizo/chamizo_2.jpg",
+    "data/img/chamizo/chamizo_3.jpg",
+    "data/img/chamizo/chamizo_4.jpg",
+    "data/img/chamizo/chamizo_5.jpg",
+    "data/img/chamizo/chamizo_6.jpg"
+  ]
+}

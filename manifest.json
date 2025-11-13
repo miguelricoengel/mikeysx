@@ -95,6 +95,14 @@
       "label": "data/img/soldado/soldado_lateral.jpg",
       "cover": "data/img/soldado/soldado_cover.jpg",
       "src": "data/json/soldado.json"
+    },
+    {
+      "id": "chamizo",
+      "title": "chamizo",
+      "artist": "mikesx",
+      "label": "data/img/chamizo/chamizo_lateral.jpg",
+      "cover": "data/img/chamizo/chamizo_cover.jpg",
+      "src": "data/json/chamizo.json"
     }
   ]
 }
