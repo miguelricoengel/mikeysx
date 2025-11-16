@@ -49,14 +49,6 @@
       "src": "data/json/bb.json"
     },
     {
-      "id": "noTengoBateria",
-      "title": "noTengoBateria",
-      "artist": "LASKAAR",
-      "label": "data/img/noTengoBateria/noTengoBateria_lateral.jpg",
-      "cover": "data/img/noTengoBateria/noTengoBateria_cover.jpg",
-      "src": "data/json/noTengoBateria.json"
-    },
-    {
       "id": "celoso",
       "title": "celoso",
       "artist": "mikesx",
