@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "id": "mikesx",
+      "title": "mikesx",
+      "artist": "mikesx",
+      "label": "data/img/mikesx/mikesx_lateral.jpg",
+      "cover": "data/img/mikesx/mikesx_cover.jpg",
+      "src": "data/json/mikesx.json"
+    },
+    {
       "id": "sexOnTheBeach",
       "title": "sex on the beacg",
       "artist": "Mike",
@@ -64,14 +72,6 @@
       "label": "data/img/virtualDiva/virtualDiva_lateral.jpg",
       "cover": "data/img/virtualDiva/virtualDiva_cover.jpg",
       "src": "data/json/virtualDiva.json"
-    },
-    {
-      "id": "mikesx",
-      "title": "mikesx",
-      "artist": "mikesx",
-      "label": "data/img/mikesx/mikesx_lateral.jpg",
-      "cover": "data/img/mikesx/mikesx_cover.jpg",
-      "src": "data/json/mikesx.json"
     },
     {
       "id": "777",
