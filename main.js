@@ -1,10 +1,10 @@
 "use strict";
 
 /**
- * MIKESX — main.js (random-first + fill-to-120% + simple infinite scroll)
+ * MIKESX — main.js (about-first + fill-to-120% + simple infinite scroll)
  * VERSIÓN MEJORADA con optimizaciones de rendimiento y seguridad
  * -----------------------------------------------------------------------
- * - Carga manifest.json y pinta TODOS los CDs una vez, en orden aleatorio.
+ * - Pinta primero el "about" (id mikesx) y luego el resto en orden de manifest.
  * - Si no hay suficiente contenido, rellena hasta cubrir ~FILL_FACTOR * 100% del viewport
  *   añadiendo lotes (con posibles repeticiones) tomados de un pool circular re-barajable.
  * - Scroll infinito simple: cuando el usuario se acerca al final, añade otro lote.
@@ -25,6 +25,8 @@ const host  = document.getElementById("scrollHost");
 const tpl   = document.getElementById("cdTemplate");
 
 /* ===================== Config (tweakables) ================== */
+/** ID especial para fijar "about" al inicio */
+const ABOUT_ID = "mikesx";
 /** Tamaño del lote para rellenar / infinito */
 const BATCH_SIZE  = 8;
 /** Umbral "cerca del final". 0.2 = al pasar el 80% del scroll */
@@ -39,6 +41,8 @@ const RESIZE_DEBOUNCE = 150;
 let manifest = [];
 /** Pool barajado (se recorre en bucle para crear lotes extra) */
 let pool = [];
+/** Fuentes del pool (excluye el about para no repetirlo en scroll infinito) */
+let poolSource = [];
 /** Puntero dentro del pool circular */
 let poolPtr = 0;
 /** Control de listeners para no duplicarlos accidentalmente */
@@ -63,7 +67,7 @@ init().catch((err) => {
 /**
  * Punto de entrada.
  * 1) Carga manifest y lo normaliza.
- * 2) Pinta TODOS los ítems 1 vez en orden aleatorio.
+ * 2) Pinta primero el about (id=mikesx) y luego el resto en orden del manifest.
  * 3) Rellena hasta ~FILL_FACTOR * 100% del viewport si no hay overflow.
  * 4) Activa scroll infinito simple.
  */
@@ -81,14 +85,17 @@ async function init() {
     return;
   }
 
-  // 1) Respetar el orden del manifest en la primera pasada
-  const orderedOnce = [...manifest];
+  // 1) Respetar el orden del manifest en la primera pasada con el about fijado al inicio
+  const aboutItem = manifest.find(isAboutItem) || null;
+  const otherItems = manifest.filter((it) => !isAboutItem(it));
+  const orderedOnce = aboutItem ? [aboutItem, ...otherItems] : manifest;
 
-  // 2) Render: primera pasada (todos una vez, orden del manifest)
+  // 2) Render: primera pasada (about + resto en orden)
   renderInitial(orderedOnce);
 
-  // 3) Preparar pool circular para rellenos (triple pool para reducir re-barajados)
-  pool = shuffle([...manifest, ...manifest, ...manifest]);
+  // 3) Preparar pool circular (sin repetir el about) para rellenos (triple pool para reducir re-barajados)
+  poolSource = otherItems.length > 0 ? otherItems : manifest;
+  pool = shuffle([...poolSource, ...poolSource, ...poolSource]);
   poolPtr = 0;
 
   // 4) Asegurar overflow mínimo (~FILL_FACTOR * viewport)
@@ -143,12 +150,12 @@ function renderInitial(list) {
  * Incluye límite de seguridad basado en elementos, no iteraciones arbitrarias.
  */
 function ensureMinFill() {
-  if (!host || manifest.length === 0) return;
+  if (!host || poolSource.length === 0) return;
   
   const targetPx = Math.ceil(window.innerHeight * FILL_FACTOR);
   
   // Límite conservador: máximo 10 repeticiones del catálogo completo
-  const maxElements = Math.min(200, manifest.length * 10);
+  const maxElements = Math.min(200, poolSource.length * 10);
   let addedCount = 0;
 
   while (host.scrollHeight < targetPx && addedCount < maxElements) {
@@ -319,6 +326,15 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+/**
+ * Detecta si un item corresponde al bloque "about".
+ * @param {Partial<CDItem>} it
+ * @returns {boolean}
+ */
+function isAboutItem(it) {
+  return String(it.id ?? "").toLowerCase() === ABOUT_ID;
 }
 
 /* ===================== Tipos JSDoc ========================== */
