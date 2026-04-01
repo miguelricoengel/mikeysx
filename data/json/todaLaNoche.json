@@ -5,10 +5,6 @@
   "description": "La noche jadea, metálica y oscura como un animal salvaje. Agarrada por los cuernos, aguanta sus embestidas acompañando con la cadera hasta que se desvanece y la luz irrumpe. Hasta que todo cae al suelo y el cuerpo rueda al ritmo de sus impulsos más escondidos.",
   "images": [
     "data/img/todaLaNoche/todaLaNoche_cover.jpg",
-    "data/img/todaLaNoche/todaLaNoche_2.jpg",
-    "data/img/todaLaNoche/todaLaNoche_3.jpg",
-    "data/img/todaLaNoche/todaLaNoche_4.jpg",
-    "data/img/todaLaNoche/todaLaNoche_5.jpg",
-    "data/img/todaLaNoche/todaLaNoche_6.jpg"
+    "data/img/todaLaNoche/todaLaNoche_lateral.jpg"
   ]
 }
