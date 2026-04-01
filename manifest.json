@@ -23,6 +23,62 @@
       "label": "data/img/anela/anela_lateral.jpg",
       "cover": "data/img/anela/anela_cover.jpg",
       "src": "data/json/anela.json"
+    },   {
+      "id": "soldado",
+      "title": "soldado",
+      "artist": "mikesx",
+      "label": "data/img/soldado/soldado_lateral.jpg",
+      "cover": "data/img/soldado/soldado_cover.jpg",
+      "src": "data/json/soldado.json"
+    },
+    {
+      "id": "mejorqueyo",
+      "title": "mejor que yo",
+      "artist": "st. PAVLO",
+      "label": "data/img/mejorqueyo/mejorqyo_lateral.jpg",
+      "cover": "data/img/mejorqueyo/mejorqyo_cover.jpg",
+      "src": "data/json/mejorqueyo.json"
+    }, 
+ 
+  {
+      "id": "caritatriste",
+      "title": "carita triste",
+      "artist": "mikesx",
+      "label":  "data/img/caritatriste/carita_lateral.jpg",
+      "cover":  "data/img/caritatriste/carita_cover.jpg",
+      "src": "data/json/caritatriste.json"
+    },   
+ 
+      {
+      "id": "abrazodeguerra",
+      "title": "abrazo de guerra",
+      "artist": "mikesx",
+      "label":  "data/img/abrazodeguerra/abrazo_lateral.jpg",
+      "cover":  "data/img/abrazodeguerra/abrazo_cover.jpg",
+      "src": "data/json/abrazodeguerra.json"
+    },   {
+      "id": "celosomerch",
+      "title": "celoso merch",
+      "artist": "mikesx",
+      "label": "data/img/celosomerch/celoso_lateral.jpg",
+      "cover": "data/img/celosomerch/celoso_cover.jpg",
+      "src": "data/json/celosomerch.json"
+    },
+{
+      "id": "asfaltodeverano",
+      "title": "asfaltodeverano",
+      "artist": "mikesx",
+      "label": "data/img/asfaltodeverano/asfalto_lateral.jpg",
+      "cover": "data/img/asfaltodeverano/asfalto_cover.jpg",
+      "src": "data/json/asfaltodeverano.json"
+    },
+    {
+      "id": "todaLaNoche",
+      "title": "toda la noche",
+      "artist": "RAOUL",
+      "label": "data/img/todaLaNoche/todaLaNoche_lateral.jpg",
+      "cover": "data/img/todaLaNoche/todaLaNoche_cover.jpg",
+      "src": "data/json/todaLaNoche.json"
     },
     {
       "id": "chamizo",
@@ -33,6 +89,16 @@
       "src": "data/json/chamizo.json"
     },
     {
+
+      "id": "furyduty",
+      "title": "fury duty",
+      "artist": "mikesx",
+      "label": "data/img/furyduty/furyduty_lateral.jpg",
+      "cover": "data/img/furyduty/furyduty_cover.png",
+      "src": "data/json/furyduty.json"
+    },
+
+    {
       "id": "gasolina",
       "title": "gasolina",
       "artist": "bajocero x",
@@ -40,14 +106,6 @@
       "cover": "data/img/gasolina/gasolina_cover.jpg",
       "src": "data/json/gasolina.json"
     },  
-    {
-      "id": "soldado",
-      "title": "soldado",
-      "artist": "mikesx",
-      "label": "data/img/soldado/soldado_lateral.jpg",
-      "cover": "data/img/soldado/soldado_cover.jpg",
-      "src": "data/json/soldado.json"
-    },
     {
       "id": "bb",
       "title": "bb",
@@ -64,8 +122,24 @@
       "cover": "data/img/celoso/celoso_cover.jpg",
       "src": "data/json/celoso.json"
     },
-    
     {
+      "id": "mejorqueyo",
+      "title": "mejor que yo",
+      "artist": "st. PAVLO",
+      "label": "data/img/mejorqueyo/mejorqyo_lateral.jpg",
+      "cover": "data/img/mejorqueyo/mejorqyo_cover.jpg",
+      "src": "data/json/mejorqueyo.json"
+    },
+    {
+      "id": "anela",
+      "title": "anela",
+      "artist": "belen aguilera",
+      "label": "data/img/anela/anela_lateral.jpg",
+      "cover": "data/img/anela/anela_cover.jpg",
+      "src": "data/json/anela.json"
+    },
+
+     {
       "id": "virtualDiva",
       "title": "virtual diva",
       "artist": "mikesx",
@@ -98,12 +172,36 @@
       "src": "data/json/munyekeo.json"
     },
     {
+      "id": "sexOnTheBeach",
+      "title": "sex on the beacg",
+      "artist": "Mike",
+      "label": "data/img/sexOnTheBeach/sexOnTheBeach_lateral.jpg",
+      "cover": "data/img/sexOnTheBeach/sexOnTheBeach_1.jpg",
+      "src": "data/json/sexOnTheBeach.json"
+    },
+    {
+      "id": "anela",
+      "title": "anela",
+      "artist": "belen aguilera",
+      "label": "data/img/anela/anela_lateral.jpg",
+      "cover": "data/img/anela/anela_cover.jpg",
+      "src": "data/json/anela.json"
+    },{
       "id": "todaLaNoche",
       "title": "toda la noche",
       "artist": "RAOUL",
       "label": "data/img/todaLaNoche/todaLaNoche_lateral.jpg",
       "cover": "data/img/todaLaNoche/todaLaNoche_cover.jpg",
       "src": "data/json/todaLaNoche.json"
+    },
+    {
+      "id": "mejorqueyo",
+      "title": "mejor que yo",
+      "artist": "st. PAVLO",
+      "label": "data/img/mejorqueyo/mejorqyo_lateral.jpg",
+      "cover": "data/img/mejorqueyo/mejorqyo_cover.jpg",
+      "src": "data/json/mejorqueyo.json"
     }
+    
   ]
 }
