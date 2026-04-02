@@ -13,7 +13,7 @@ async function init() {
   }
   
   // Cargar el JSON de detalle del proyecto
-  let data = {};
+  let data;
   if (item.src) {
     try {
       data = await (await fetch(item.src)).json();
@@ -43,7 +43,49 @@ document.getElementById("pTitle").textContent = data.title || "Sin título";
 document.getElementById("pArtist").textContent = data.artist || "";
 document.getElementById("pYear").textContent = data.year || "";
 document.getElementById("pDesc").textContent = data.description || "";
+
+// Insta Link
+const instaLink = document.getElementById("pInsta");
+if (instaLink && data.instagram) {
+  instaLink.href = data.instagram;
+} else if (instaLink) {
+  instaLink.style.display = "none";
+}
 document.title = (data.title || "PROYECTO").toUpperCase();
+
+// Mail Link
+
+const base = item;
+
+let detail = {};
+if (item.src) {
+  try {
+    detail = await (await fetch(item.src)).json();
+  } catch (e) {
+    console.warn(e);
+  }
+}
+
+data = {
+  ...base,
+  ...detail
+};
+
+const mailLink = document.getElementById("pMail");
+
+if (mailLink) {
+  const email = data.email || "heymikesx@gmail.com";
+  const isAbout = data.isAbout === true || data.isAbout === "true";
+
+  if (isAbout) {
+    mailLink.href = `mailto:${email}`;
+    mailLink.style.display = "inline-block";
+  } else {
+    mailLink.removeAttribute("href");
+    mailLink.style.display = "none";
+  }
+}
+
 
 // Inserta el enlace pequeño cuando el proyecto es "mikesx"
 if ((id || "").toLowerCase() === "mikesx") {

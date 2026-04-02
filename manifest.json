@@ -6,6 +6,9 @@
       "artist": "mikesx",
       "label": "data/img/mikesx/mikesx_lateral.jpg",
       "cover": "data/img/mikesx/mikesx_cover.jpg",
+      "instagram": "https://instagram.com/mikesx",
+      "email": "heymikesx@gmail.com",
+      "isAbout": true,
       "src": "data/json/mikesx.json"
     },
     {
