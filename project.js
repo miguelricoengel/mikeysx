@@ -42,7 +42,8 @@ if (coverSrc) {
 document.getElementById("pTitle").textContent = data.title || "Sin título";
 document.getElementById("pArtist").textContent = data.artist || "";
 document.getElementById("pYear").textContent = data.year || "";
-document.getElementById("pDesc").textContent = data.description || "";
+document.getElementById("pDesc").innerHTML =
+  (data.description || "").replace(/\n/g, "<br>");
 
 // Insta Link
 const instaLink = document.getElementById("pInsta");
