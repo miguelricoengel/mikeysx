@@ -4,11 +4,11 @@
   "year": 2025,
   "description": "If Donnie Darko checked AI out, these would be his trials.",
   "images": [
-   "data/img/furyduty/furyduty_cover.png", 
-   "data/img/furyduty/furyduty_1.jpeg",
-   "data/img/furyduty/furyduty_2.jpeg", 
-   "data/img/furyduty/furyduty_3.jpeg",
-   "data/img/furyduty/furyduty_4.png",
-   "data/img/furyduty/furyduty_5.png"
+    "data/img/furyduty/furyduty_cover.webp",
+    "data/img/furyduty/furyduty_1.webp",
+    "data/img/furyduty/furyduty_2.webp",
+    "data/img/furyduty/furyduty_3.webp",
+    "data/img/furyduty/furyduty_4.webp",
+    "data/img/furyduty/furyduty_5.webp"
   ]
 }

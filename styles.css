@@ -67,7 +67,7 @@ body {
 @media (min-width: 600px) {
   .scroll-host {
     width: clamp(320px, 48vw, 560px);
-    max-width: 480;
+    max-width: 480px;
   }
   /* .topbar {
     width: clamp(320px, 48vw, 560px);
@@ -164,7 +164,17 @@ p#pDesc {
   font-family: "Saira", sans-serif;
   font-weight: 300;
   line-height: 1.6;
-}.insta-link {
+}
+
+/* Resalte dentro de las descripciones (<span class="highlight">) */
+.highlight {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.insta-link {
   color: inherit;
   font: inherit;
   text-decoration: none;
@@ -182,14 +192,6 @@ p#pDesc {
   opacity: 0.7;
 }
 
-
-@keyframes glitchLine {
-  0%   { transform: translateX(0); opacity: 0.6; }
-  25%  { transform: translateX(2px); opacity: 0.2; }
-  50%  { transform: translateX(-2px); opacity: 0.8; }
-  75%  { transform: translateX(1px); opacity: 0.3; }
-  100% { transform: translateX(0); opacity: 0.6; }
-}
 /* --- Capas fijas sin pseudo-elementos --------------------------- */
 .project-stage {
   position: relative;
@@ -284,11 +286,16 @@ p#pDesc {
   -webkit-overflow-scrolling: touch;
 }
 .gallery-image {
-  height: auto;
+  /* Caja CUADRADA fija: todos los proyectos reservan el mismo hueco para la
+     imagen, sea cual sea su proporción. Sin esto, una imagen vertical (p.ej.
+     la del about) hacía crecer la altura de la ficha respecto al resto. */
   width: 80vw;
   max-width: 400px;
-  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: contain; /* se ajusta dentro del cuadrado, nunca recorta */
   display: inline-block;
+  vertical-align: middle; /* evita el hueco de baseline bajo la imagen */
   margin: 0 50px;
   scroll-snap-align: center;
 }
