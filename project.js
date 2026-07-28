@@ -78,7 +78,7 @@ if ((id || "").toLowerCase() === "mikesx") {
   if (card) {
     const footnote = document.createElement("p");
     footnote.className = "project-footnote";
-    footnote.innerHTML = `web: <a href="https://meowrhino.github.io/becasDigMeow/" target="_blank" rel="noopener noreferrer">meowrhino</a>`;
+    footnote.innerHTML = `web: <a href="https://meowrhino.studio" target="_blank" rel="noopener noreferrer">meowrhino.studio</a>`;
     if (backBtn) {
       card.insertBefore(footnote, backBtn);
     } else {
